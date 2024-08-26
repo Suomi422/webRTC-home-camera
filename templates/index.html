@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/main.css">
+    <title>WebRTC Server</title>
+</head>
+<body>
+
+    <!-- Header with Matrix Text Effect -->
+    <header class="MatrixTextEffect">
+        <h1>WebRTC Server</h1>
+    </header>
+    <br>
+
+    <!-- Media Container, hidden initially -->
+    <div id="media" style="display: none;">
+        <audio id="audio" autoplay></audio>
+        <video id="video" autoplay playsinline></video>
+        <div id="controls">
+            <div class="progress">
+                <div class="progress__filled"></div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Control Buttons -->
+    <div class="controls">
+        <button id="start" onclick="start()">▶</button>
+        <button id="stop" style="display: none;" onclick="stop()">❚❚</button>
+    </div>
+    <br>
+
+    <!-- Time Display -->
+    <div class="MatrixTextEffect" id="time"></div>
+
+    <!-- Canvases -->
+    <canvas id="canvas" width="128" height="72"></canvas>
+    <canvas id="canvas2" width="128" height="72">.</canvas>
+
+    <!-- JavaScript Files -->
+    <script src="matrix.js"></script>
+    <script src="client.js"></script>
+
+</body>
+</html>
