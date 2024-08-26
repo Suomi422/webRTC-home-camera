@@ -2,6 +2,8 @@
 I was searching for a simple USB camera streaming solution for my home server that is not resource-intensive and does not use too much data. Unable to find anything that met my needs, I decided to write one myself.
 
 This repository contains a simple web server intended to be run only on a local area network (LAN) in development mode. It does not include advanced production features.
+The server can serve multiple requests and once and also has a timer that will disconnet clients, if they are connected too long.
+(I hate it when I use cellular data and forgot to close the connection)
 
 Before running the server, please install the required packages listed in req.txt by executing:
 `pip install -r req.txt`.
