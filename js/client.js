@@ -102,7 +102,7 @@ function stop() {
         setTimeout(() => {
         pc.close();
         pc = null;
-        timeElement.classList.remove('animate');
+        timeElement.classList.remove('Pulse');
         updateTimeText(maxTimeInterval);
         }, 500);
     }
@@ -115,7 +115,7 @@ function checkConnectionDuration() {
         const elapsedTime = (Date.now() - startTime) / 1000;
         const timeLeft = Math.max(0, maxTimeInterval - elapsedTime);
         updateTimeText(timeLeft);
-        timeElement.classList.add('animate');
+        timeElement.classList.add('Pulse');
 
         if (elapsedTime > maxTimeInterval) {
             stop();
