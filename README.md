@@ -28,4 +28,5 @@ After configuring the settings, you can run the code using:
 You can then access the server from your PC's IP address and port (e.g., http://<your-ip>:8080). If you are using certificates like I am, you can also use `https://`.
 The final result should look something like this. (By the way, I included a fancy matrix animation that I like, lol.)
 
-![Screenshot_20240826_151752](https://github.com/user-attachments/assets/0e9dd717-11a3-4a4a-84ef-876df0e31e4a)
+
+![Screenshot_20240826_151752](https://github.com/user-attachments/assets/3f584589-ab4a-472c-a828-a88b3001b43c)
