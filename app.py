@@ -12,6 +12,8 @@ from aiortc.rtcrtpsender import RTCRtpSender
 from aiortc.contrib.media import MediaPlayer, MediaRelay
 from aiortc import RTCPeerConnection, RTCSessionDescription
 
+from CustomVideoTrack import CustomVideoTrack
+
 ROOT = os.path.dirname(__file__)
 PCS = set()
 
@@ -70,7 +72,8 @@ class CameraObject:
 def create_local_tracks(camera_object):
     """Create local media tracks."""
     camera_object.initialize()
-    return None, camera_object.get_video_track()
+    video_track = CustomVideoTrack(camera_object.get_video_track())
+    return None, video_track
 
 
 
@@ -119,6 +122,7 @@ async def offer(request, camera_object):
     """Handle offer from client and create an answer."""
     params = await request.json()
     offer_ = RTCSessionDescription(sdp=params["sdp"], type=params["type"])
+    print(offer_)
 
     pc = RTCPeerConnection()
     PCS.add(pc)

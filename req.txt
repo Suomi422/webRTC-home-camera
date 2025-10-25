@@ -21,3 +21,4 @@ pyOpenSSL==24.2.1
 PyYAML==6.0.2
 typing_extensions==4.12.2
 yarl==1.9.4
+yolov5==7.0.14
